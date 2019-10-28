@@ -256,9 +256,9 @@
 /dev/block/(.*/)?by-name/system		u:object_r:system_block_device:s0
 /dev/block/(.*/)?by-name/userdata		u:object_r:userdata_block_device:s0
 /vendor/lib(64)?/libeden+[a-zA-Z0-9_\-.]*\.so		u:object_r:same_process_hal_file:s0
-/data/camera(/.*)?		u:object_r:camera_data_file:s0
-/efs/cpdebug(/.*)?		u:object_r:cpdebug_efs_file:s0
 /data/dxprdy(/.*)?		u:object_r:drm_playready_file:s0
+/efs/cpdebug(/.*)?		u:object_r:cpdebug_efs_file:s0
+/data/camera(/.*)?		u:object_r:camera_data_file:s0
 /data/bio/ir(/.*)?		u:object_r:iris_data_file:s0
 /data/bcmnfc(/.*)?		u:object_r:nfc_data_file:s0
 /system/info.extra		u:object_r:info_extra_system_file:s0
@@ -378,8 +378,8 @@
 /efs/sec_efs/iss/.policy_config		u:object_r:sec_efs_file:s0
 /sys/devices/soc/[0-9]+\.sdhci/mmc_host/mmc0/mmc0:0001/cid		--	u:object_r:sysfs_time_in_state:s0
 /data/system_ce/1[0-9][0-9]/shortcut_service/bitmaps(/.*)?		u:object_r:shortcut_manager_icons:s0
-/data/vendor/audio(/.*)?		u:object_r:vendor_audio_data_file:s0
 /sys/kernel/mm/ksm(/.*)?		u:object_r:sysfs_memory:s0
+/data/vendor/audio(/.*)?		u:object_r:vendor_audio_data_file:s0
 /sys/block/mmcblk0(/.*)?		u:object_r:sysfs_mmc_host:s0
 /sys/block/mmcblk1(/.*)?		u:object_r:sysfs_mmc_host:s0
 /data/system/users(/.*)?		u:object_r:users_system_data_file:s0
@@ -687,9 +687,9 @@
 /dev/poc		u:object_r:graphics_device:s0
 /dev/g2d		u:object_r:graphics_device:s0
 /dev/dun2		u:object_r:dun_device:s0
-/sbin/cbd		u:object_r:cbd_exec:s0
 /dev/cip1		u:object_r:cip_device:s0
 /dev/cip2		u:object_r:cip_device:s0
+/sbin/cbd		u:object_r:cbd_exec:s0
 /dev/mali		u:object_r:gpu_device:s0
 /dev/mpsd		u:object_r:mpsd_device:s0
 /dev/jsqz		u:object_r:jsqz_device:s0
@@ -707,10 +707,10 @@
 /dev/score		u:object_r:stitch_device:s0
 /dev/tsmux		u:object_r:tsmux_device:s0
 /dev/mali0		u:object_r:gpu_device:s0
-/dev/radio0		u:object_r:fm_radio_device:s0
 /dev/uartcc		u:object_r:nfc_device:s0
 /dev/felica		u:object_r:felica_device:s0
 /dev/nr_dm0		u:object_r:radio_device:s0
+/dev/radio0		u:object_r:fm_radio_device:s0
 /dev/btlock		u:object_r:hci_attach_dev:s0
 /dev/seiren		u:object_r:seiren_device:s0
 /dev/qbtspi		u:object_r:qbt_device:s0
@@ -718,9 +718,9 @@
 /dev/vfsspi		u:object_r:fp_sensor_device:s0
 /dev/fimg2d		u:object_r:graphics_device:s0
 /dev/ttyHSL2		u:object_r:nfcfelica_device:s0
-/dev/nr_ipc1		u:object_r:radio_device:s0
 /dev/nr_rfs0		u:object_r:radio_device:s0
 /dev/nr_ipc0		u:object_r:radio_device:s0
+/dev/nr_ipc1		u:object_r:radio_device:s0
 /dev/genlock		u:object_r:genlock_device:s0
 /dev/msm_sps		u:object_r:input_device:s0
 /dev/bbd_sio		u:object_r:bbd_device:s0
@@ -744,9 +744,9 @@
 /dev/iva_ctl		u:object_r:stitch_device:s0
 /dev/vertex0		u:object_r:vendor_ofi_device:s0
 /dev/nanohub		u:object_r:vendor_nanohub_device:s0
-/dev/snfc_rfs		u:object_r:nfc_device:s0
-/dev/snfc_cen		u:object_r:nfcfelica_device:s0
 /dev/snfc_pon		u:object_r:nfc_device:s0
+/dev/snfc_cen		u:object_r:nfcfelica_device:s0
+/dev/snfc_rfs		u:object_r:nfc_device:s0
 /dev/nr_boot0		u:object_r:radio_device:s0
 /dev/pvr_sync		u:object_r:pvrsync_device:s0
 /dev/msm_evrc		u:object_r:audio_device:s0
@@ -789,11 +789,11 @@
 /system/bin/nst		u:object_r:vold_exec:s0
 /dev/socket/nst		u:object_r:nst_socket:s0
 /dev/felica_cen		u:object_r:nfcfelica_device:s0
-/dev/felica_ant		u:object_r:felica_device:s0
-/dev/felica_uid		u:object_r:felica_device:s0
-/dev/felica_rfs		u:object_r:felica_device:s0
-/dev/felica_rws		u:object_r:felica_device:s0
 /dev/felica_pon		u:object_r:felica_device:s0
+/dev/felica_rfs		u:object_r:felica_device:s0
+/dev/felica_ant		u:object_r:felica_device:s0
+/dev/felica_rws		u:object_r:felica_device:s0
+/dev/felica_uid		u:object_r:felica_device:s0
 /dev/__cld_msg_		u:object_r:cld_msg_device:s0
 /dev/bbd_sensor		u:object_r:bbd_device:s0
 /dev/bbd_packet		u:object_r:bbd_device:s0
@@ -822,13 +822,13 @@
 /dev/socket/sdp		u:object_r:sdp_socket:s0
 /system/bin/lpm		u:object_r:lpm_exec:s0
 /dev/umts_boot0		u:object_r:radio_device:s0
+/system/bin/mfdp		u:object_r:mfdp_exec:s0
+/system/bin/mfsc		u:object_r:mfsc_exec:s0
 /system/bin/spqr		u:object_r:spqr_exec:s0
 /system/bin/rdxd		u:object_r:rdxd_exec:s0
 /dev/felica_uicc		u:object_r:felica_device:s0
-/system/bin/mfdp		u:object_r:mfdp_exec:s0
-/system/bin/mfsc		u:object_r:mfsc_exec:s0
-/dev/block/zram0		u:object_r:swap_block_device:s0
 /dev/nr_ramdump0		u:object_r:radio_device:s0
+/dev/block/zram0		u:object_r:swap_block_device:s0
 /system/bin/imsd		u:object_r:imsd_exec:s0
 /system/bin/mcxd		u:object_r:mcxd_exec:s0
 /dev/bbd_control		u:object_r:bbd_device:s0
@@ -851,6 +851,7 @@
 /dev/tz_wormhole		u:object_r:tz_user_device:s0
 /dev/socket/epic		u:object_r:epicd_socket:s0
 /dev/umts_router		u:object_r:radio_device:s0
+/system/bin/k0622		u:object_r:service_mode_exec:s0
 /dev/bbd_reliable		u:object_r:bbd_device:s0
 /dev/kfc_freq_min		u:object_r:ap_device:s0
 /dev/msm_amrwb_in		u:object_r:audio_device:s0
@@ -865,9 +866,11 @@
 /dev/socket/stork		u:object_r:stork_socket:s0
 /system/bin/irisd		u:object_r:irisd_exec:s0
 /dev/gpu_freq_min		u:object_r:pm_qos_file:s0
+/system/bin/k00011		u:object_r:service_mode_exec:s0
+/system/bin/k02263		u:object_r:service_mode_exec:s0
+/data/\.diag_stream		u:object_r:diagexe_socket:s0
 /dev/block/mmcblk1		u:object_r:sd_device:s0
 /dev/spi_boot_link		u:object_r:spi_boot_device:s0
-/data/\.diag_stream		u:object_r:diagexe_socket:s0
 /dev/snfc_rfs_poll		u:object_r:nfc_device:s0
 /dev/ipc_loopback0		u:object_r:ipc_loopback0_device:s0
 /system/bin/dmm_v2		u:object_r:DMM-daemon_exec:s0
@@ -891,8 +894,8 @@
 /system/bin/auditd		u:object_r:auditd_exec:s0
 /dev/umts_ramdump0		u:object_r:radio_device:s0
 /system/bin/eprosed		u:object_r:eprosed_exec:s0
-/system/bin/diagexe		u:object_r:diagexe_exec:s0
 /dev/snfc_intu_poll		u:object_r:nfc_device:s0
+/system/bin/diagexe		u:object_r:diagexe_exec:s0
 /system/bin/adptmon		u:object_r:adptmon_exec:s0
 /system/bin/sec-ril		u:object_r:sec-ril_exec:s0
 /data/system/kb\.bin		u:object_r:drm_data_file:s0
@@ -907,6 +910,7 @@
 /system/bin/dhkprov		u:object_r:dhkprov_exec:s0
 /system/bin/epmlogd		u:object_r:epmlogd_exec:s0
 /dev/bus_throughput		u:object_r:pm_qos_file:s0
+/system/bin/k09900cp		u:object_r:service_mode_exec:s0
 /dev/felica_int_poll		u:object_r:felicashell_device:s0
 /system/bin/fsslcmnd		u:object_r:fsslcmnd_exec:s0
 /sys/power/ftm_sleep		u:object_r:sysfs_ss_writable:s0
@@ -931,6 +935,7 @@
 /efs/CamMotorRetryCnt		u:object_r:app_efs_file:s0
 /efs/CamMotorSlideCnt		u:object_r:app_efs_file:s0
 /system/bin/rsudaemon		u:object_r:rsudaemon_exec:s0
+/system/bin/k02683662		u:object_r:service_mode_exec:s0
 /dev/ramdump_memshare		u:object_r:ramdump_device:s0
 /sys/power/rtc_status		u:object_r:sysfs_ss_writable:s0
 /data/\.npswifi_stream		u:object_r:mobexdaemon_socket:s0
@@ -949,8 +954,8 @@
 /system/bin/pa_daemon		u:object_r:pa_daemon_exec:s0
 /dev/m2m1shot_scaler0		u:object_r:vendor_m2m1shot_device:s0
 /system/bin/fsck\.vfat		--	u:object_r:fsck_exec:s0
-/system/bin/nexprocess		u:object_r:oneseg_mw_exec:s0
 /system/bin/MmbFcCtlMw		u:object_r:mmb_mw_exec:s0
+/system/bin/nexprocess		u:object_r:oneseg_mw_exec:s0
 /system/bin/sem_daemon		u:object_r:sem_exec:s0
 /system/bin/vpnclientd		u:object_r:vpnclientd_exec:s0
 /system/bin/preparefbe		u:object_r:preparefbe_exec:s0
@@ -1007,10 +1012,11 @@
 /mnt/vendor/efs/osc_trim		u:object_r:sec_efs_file:s0
 /mnt/vendor/efs/prox_cal		u:object_r:sec_efs_file:s0
 /system/bin/vaultkeeperd		u:object_r:vaultkeeperd_exec:s0
+/system/bin/MmbCaCasDrmMw		u:object_r:mmb_mw_exec:s0
 /system/bin/OneSegTsDemux		u:object_r:oneseg_mw_exec:s0
 /data/ss_conn_daemon2\.pid		u:object_r:proc_info_file:s0
+/system/bin/k027663368378		u:object_r:service_mode_exec:s0
 /system/bin/perfsdkserver		u:object_r:perfsdkserver_exec:s0
-/system/bin/MmbCaCasDrmMw		u:object_r:mmb_mw_exec:s0
 /dev/scsc_log_collector_0		u:object_r:scsc_log_collector_device:s0
 /system/bin/OneSegControl		u:object_r:oneseg_mw_exec:s0
 /system/bin/tima_dump_log		u:object_r:tima_dump_exec:s0
@@ -1020,8 +1026,8 @@
 /vendor/bin/gpu_snapshotd		u:object_r:gpu_snapshotd_exec:s0
 /mnt/vendor/efs/hw_offset		u:object_r:sec_efs_file:s0
 /system/bin/remotedisplay		u:object_r:remotedisplay_exec:s0
-/vendor/lib64/libOpenCL\.so		u:object_r:vendor_file:s0
 /vendor/lib/libOpenCL\.so\.1		u:object_r:vendor_file:s0
+/vendor/lib64/libOpenCL\.so		u:object_r:vendor_file:s0
 /system/bin/ss_conn_daemon		u:object_r:ss_conn_daemon_exec:s0
 /system/bin/at_distributor		u:object_r:at_distributor_exec:s0
 /system/bin/wlandutservice		u:object_r:wlandutservice_exec:s0
