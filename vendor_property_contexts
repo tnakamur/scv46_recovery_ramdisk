@@ -196,6 +196,10 @@ tas.smartamp.disable				u:object_r:smartamp_prop:s0
 persist.security.cmfa      u:object_r:cmfa_prop:s0
 persist.security.cmfa.data      u:object_r:cmfa_data_prop:s0
 
+# https://mobilerndhub.sec.samsung.net/its/browse/SEANDROID-2873
+knoxsdk.tac.header          u:object_r:knox_kap_prop:s0
+knoxsdk.tac.body            u:object_r:knox_kap_prop:s0
+
 #line 1 "vendor/samsung/system/sepolicy/BSP/slsi/common/property_contexts"
 ##########################
 # property service keys
