@@ -2,7 +2,7 @@
 # for recovery (global)
 
 on init-recovery
-    mount --option=ro /system
+#    mount --option=ro /system
 
     mount -f /cache
     ls /cache/recovery/
@@ -59,7 +59,7 @@ on checking-log
 
 # running --data_resizing with the userdata binaray
 on resizing-data
-    mount --option=ro /system
+#    mount --option=ro /system
 
     exec -f "/system/bin/e2fsck -y -f <dev_node:/data>"
     mount --option=ro /data
@@ -78,7 +78,7 @@ on resizing-data
 
 # running --data_resizing-f2fs with the userdata binaray
 on resizing-data-f2fs
-    mount --option=ro /system
+#    mount --option=ro /system
 
     mount --option=ro /data
     find -v --print=/tmp/data.list /data
@@ -198,10 +198,11 @@ on exec-install-preload
 
 on rm-wipe-app-data
     echo "-- rm-wipe-app-data..."
+    mount -f /efs
     mkdir -f radio system 0771 /efs/recovery
     rm -v -f /efs/recovery/rescueparty
     write -f /efs/recovery/rescueparty "emergency_reset\n"
-
+    
 on post_wipe_data
     echo "-- post_wipe_data..."
     mkdir -f radio system 0771 /efs/recovery
