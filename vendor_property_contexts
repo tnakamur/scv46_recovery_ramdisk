@@ -153,6 +153,9 @@ vendor.teegris.							u:object_r:vendor_teegris_prop:s0
 # https://mobilerndhub.sec.samsung.net/its/browse/SEANDROID-4137
 persist.vendor.bluetooth.            u:object_r:vendor_bluetooth_prop:s0
 
+# https://mobilerndhub.sec.samsung.net/its/browse/SEANDROID-4269
+vendor.wlan.ramdump_mode  						u:object_r:vendor_wifi_ramdump_prop:s0
+
 #line 1 "device/samsung/sepolicy/common/property_contexts"
 # Reference: /system/sepolicy/private/property_contexts
 # # Common default properties for vendor and odm.

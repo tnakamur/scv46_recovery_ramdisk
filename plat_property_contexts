@@ -723,6 +723,23 @@ persist.log.semlevel      		u:object_r:debug_prop:s0
 
 # https://mobilerndhub.sec.samsung.net/its/browse/SEANDROID-4188
 ro.debug_level                      u:object_r:debug_level_prop:s0
+
+# https://mobilerndhub.sec.samsung.net/its/browse/SEANDROID-4226
+cache_key.has_system_feature             u:object_r:exported_system_prop:s0
+cache_key.is_interactive                 u:object_r:exported_system_prop:s0
+cache_key.is_power_save_mode             u:object_r:exported_system_prop:s0
+
+# https://mobilerndhub.sec.samsung.net/its/browse/SEANDROID-4341
+persist.sys.gps.dds.subId                   u:object_r:exported_system_prop:s0
+
+# https://mobilerndhub.sec.samsung.net/its/browse/SEANDROID-4391
+ril.serialnumber                           u:object_r:ril_serialno_prop:s0
+
+# https://mobilerndhub.sec.samsung.net/its/browse/SEANDROID-4499
+persist.config.chimera.enable                  u:object_r:exported_system_prop:s0
+
+# https://mobilerndhub.sec.samsung.net/its/browse/SEANDROID-4509
+io.branch.preinstall.apps.path                   u:object_r:exported_config_prop:s0
 #line 1 "system/sepolicy/public/property_contexts"
 # vendor-init-readable
 persist.radio.airplane_mode_on u:object_r:exported2_radio_prop:s0 exact int
