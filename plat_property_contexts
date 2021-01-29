@@ -740,6 +740,9 @@ persist.config.chimera.enable                  u:object_r:exported_system_prop:s
 
 # https://mobilerndhub.sec.samsung.net/its/browse/SEANDROID-4509
 io.branch.preinstall.apps.path                   u:object_r:exported_config_prop:s0
+
+# https://mobilerndhub.sec.samsung.net/its/browse/SEANDROID-4676
+ro.input.resampling                       u:object_r:system_prop:s0
 #line 1 "system/sepolicy/public/property_contexts"
 # vendor-init-readable
 persist.radio.airplane_mode_on u:object_r:exported2_radio_prop:s0 exact int
